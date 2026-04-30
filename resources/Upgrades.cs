@@ -2,34 +2,7 @@ using Godot;
 using System;
 
 public partial class Upgrades : Node2D
-<<<<<<< HEAD
-{
 
-	public string Name{get;}
-	public int Strengthmod{get;}
-	public int Attractmod{get;}
-
-
-	public string Upgrades(string name, int sMod, int aMod){
-
-		this.Name = name;
-		this.Strengthmod = sMod;
-		this.Attractmod = aMod;
-
-
-	}
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		Upgrades upgradelist[] = [];
-
-		upgradename[0] = "bushes";
-		upgradename[1] = "welcomesign";
-		upgradename[2] = "handrails";
-		upgradename[3] = "doublewide";
-		upgradename[4] = "triplewide";
-		upgradename[4] = "glassfloor";
-=======
 {		
 	public string upgradeName{get; set;}
 	public string upgradeDescription{get; set;}
@@ -45,11 +18,11 @@ public partial class Upgrades : Node2D
 		this.upgradeCost = cost;
 		this.upgradeLevel = level;
 		this.modifier = modifier;
->>>>>>> bb15e87f717949a05a2cc4b8810dc7dc5ae1dd4e
+
 	}
 
 	
-	public void UpgradeList()
+	public int UpgradePicker(String choice)
 	{
 		Upgrades bushes = new Upgrades("Bushes", "Astetic bushes that pretty up the bridge.", 50, 1, 1);
 		Upgrades welcomeSign = new Upgrades("Welcome Sign", "A sign that welcomes people to the bridge.", 20, 1, 1);
@@ -58,8 +31,39 @@ public partial class Upgrades : Node2D
 		Upgrades doubleWide = new Upgrades("Double Wide", "Make the bridge double wide to allow more traffic.", 200, 1, 2);
 		Upgrades tripleWide = new Upgrades("Triple Wide", "Make the bridge triple wide to allow even more traffic.", 400, 1, 3);
 		Upgrades glassFloor = new Upgrades("Glass Floor", "Make the floor of the bridge out of glass to give people a better view.", 500, 1, 3);
+
+		if(choice == "bushes"){
+			return bushes.modifier;
+		}
+		else if (choice == "welcome"){
+			return welcomeSign.modifier;
+		}
+		else if (choice == "lights"){
+			return lights.modifier;
+		}
+		else if (choice == "handrails"){
+			return handrails.modifier;
+		}
+		else if (choice == "doubleWide"){
+			return doubleWide.modifier;
+		}
+		else if (choice == "tripleWide"){
+			return tripleWide.modifier;
+		}
+		else if (choice == "glassFloor"){
+			return glassFloor.modifier;
+		}
+		else {return 0;}
+
+		return 0;
+
 	}	
 	
+	public int UpgradeBridge(Upgrades upgrade){
+
+		return this.modifier;
+		
+	}
 
 
 	
