@@ -13,11 +13,22 @@ public partial class Bridge : Node2D
 		Upgrades upgrade = new Upgrades("name","name",  1,1,1);
 		GD.Print(upgrade.UpgradePicker("bushes"));
 		GD.Print(bridgestats.Health);
+		UpgradeBridge("bushes");
 	
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+	}
+
+	public void UpgradeBridge(string choice)
+	{
+		Upgrades upgrade = new Upgrades("name","name",  1,1,1);
+		 upgrade = upgrade.UpgradePicker(choice);
+
+		
+
+		GD.Print(upgrade.upgradeDescription);	
 	}
 }

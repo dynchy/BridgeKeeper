@@ -22,7 +22,7 @@ public partial class Upgrades : Node2D
 	}
 
 	
-	public int UpgradePicker(String choice)
+	public Upgrades UpgradePicker(String choice)
 	{
 		Upgrades bushes = new Upgrades("Bushes", "Astetic bushes that pretty up the bridge.", 50, 1, 1);
 		Upgrades welcomeSign = new Upgrades("Welcome Sign", "A sign that welcomes people to the bridge.", 20, 1, 1);
@@ -33,10 +33,11 @@ public partial class Upgrades : Node2D
 		Upgrades glassFloor = new Upgrades("Glass Floor", "Make the floor of the bridge out of glass to give people a better view.", 500, 1, 3);
 
 		if(choice == "bushes"){
-			return bushes.modifier;
+			return bushes;
 		}
+		/*
 		else if (choice == "welcome"){
-			return welcomeSign.modifier;
+			return bushes;
 		}
 		else if (choice == "lights"){
 			return lights.modifier;
@@ -54,8 +55,8 @@ public partial class Upgrades : Node2D
 			return glassFloor.modifier;
 		}
 		else {return 0;}
-
-		return 0;
+*/
+		return welcomeSign;
 
 	}	
 	
