@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bj3lwo58u4dcj"]
+
+[ext_resource type="Script" uid="uid://lcieei1lcrsl" path="res://Bridge.cs" id="1_7ct4w"]
+
+[node name="Bridge" type="Node2D" unique_id=608873318]
+script = ExtResource("1_7ct4w")
