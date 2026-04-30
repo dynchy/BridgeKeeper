@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://dgy0tqlsb43cy"]
 
+[ext_resource type="Script" uid="uid://cmgmdkdfl82xw" path="res://resources/Upgrades.cs" id="1_spj3c"]
+
 [node name="Node2D" type="Node2D" unique_id=949848138]
+script = ExtResource("1_spj3c")
