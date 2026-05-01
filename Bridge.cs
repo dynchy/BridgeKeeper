@@ -12,7 +12,12 @@ public partial class Bridge : Node2D
 		Bridgestats bridgestats = new Bridgestats();
 		Upgrades upgrade = new Upgrades("name","name",  1,1,1);
 		GD.Print(upgrade.UpgradePicker("bushes"));
-		GD.Print(bridgestats.Health);
+		upgrade = upgrade.UpgradePicker("bushes");
+
+		GD.Print(bridgestats.Attract);
+		bridgestats.Attract += upgrade.modifier;
+		GD.Print(bridgestats.Attract);
+
 		UpgradeBridge("bushes");
 	
 	}
