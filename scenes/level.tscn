@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://iwlach6pq8nb"]
+[gd_scene format=3 uid="uid://bc48qpeah7dpr"]
 
 [ext_resource type="Texture2D" uid="uid://burepg4lgtr20" path="res://assets/terrain.png" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://dfou8f7swlako" path="res://scenes/CollisionShape2d.cs" id="2_w7c3h"]
@@ -32,7 +32,7 @@ size = Vector2(20, 93)
 texture_filter = 1
 tile_set = SubResource("TileSet_w8frs")
 format = 2
-layer_0/tile_data = PackedInt32Array(-65536, 131072, 0, -65535, 131072, 0, -65534, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, -65531, 131072, 0, -65530, 131072, 0, -65529, 131072, 0, -65528, 131072, 0, -3, 131072, 0, -4, 131072, 0, -5, 131072, 0, -6, 131072, 0, -7, 131072, 0, -65537, 262144, 0, -65538, 262144, 0, -8, 131072, 0, -9, 131072, 0, -10, 131072, 0)
+layer_0/tile_data = PackedInt32Array(-65536, 131072, 0, -65535, 131072, 0, -65534, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, -65531, 131072, 0, -65530, 131072, 0, -65529, 131072, 0, -65528, 131072, 0, -65537, 262144, 0, -65538, 262144, 0, -65539, 262144, 0, -65540, 262144, 0, -65541, 262144, 0, -65542, 262144, 0, -65543, 262144, 0, -65544, 262144, 0, -8, 65536, 0, 65528, 65536, 0, 131064, 65536, 0, 196600, 65536, 0, 262136, 65536, 0, -4, 65536, 0, 65532, 65536, 0, 131068, 65536, 0, 196604, 65536, 0, 262140, 65536, 0, -9, 131072, 0, -10, 131072, 0, -11, 131072, 0, -12, 131072, 0, -13, 131072, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=621324132]
 physics_material_override = SubResource("PhysicsMaterial_2q6dc")
@@ -43,7 +43,7 @@ shape = SubResource("RectangleShape2D_2q6dc")
 script = ExtResource("2_w7c3h")
 
 [node name="Timer" type="Timer" parent="StaticBody2D" unique_id=172509638]
-wait_time = 4.0
+wait_time = 2.0
 autostart = true
 
 [node name="WaitTimer" type="Timer" parent="StaticBody2D" unique_id=1246942516]
