@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dplcx77f0yx8t" path="res://assets/seye33.png" id="2_rv78h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abqhh"]
-size = Vector2(32.25, 17)
+size = Vector2(47.25, 17)
 
 [node name="NPC" type="CharacterBody2D" unique_id=1300587486]
 z_index = 1
@@ -14,10 +14,10 @@ script = ExtResource("1_abqhh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1296873306]
 texture_filter = 1
-position = Vector2(3.125, 0)
+position = Vector2(-4.375, 0)
 shape = SubResource("RectangleShape2D_abqhh")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1112697051]
-position = Vector2(-3.125, 0)
+position = Vector2(4.375, 0)
 scale = Vector2(1, 1.09375)
 texture = ExtResource("2_rv78h")
