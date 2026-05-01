@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://iwlach6pq8nb"]
+
+[ext_resource type="Texture2D" uid="uid://burepg4lgtr20" path="res://assets/terrain.png" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://dfou8f7swlako" path="res://scenes/CollisionShape2d.cs" id="2_w7c3h"]
+[ext_resource type="Script" uid="uid://dv41ffo0phq4p" path="res://scenes/PayPoint.cs" id="3_w8frs"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7c3h"]
+texture = ExtResource("1_2q6dc")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 3.4173145, 4.136751, 8, 8, 8, 8, -8, 8)
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_w8frs"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_w7c3h")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2q6dc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q6dc"]
+size = Vector2(13, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8sn"]
+size = Vector2(20, 93)
+
+[node name="Node2D" type="TileMap" unique_id=1447284359]
+texture_filter = 1
+tile_set = SubResource("TileSet_w8frs")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 131072, 0, -65535, 131072, 0, -65534, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, -65531, 131072, 0, -65530, 131072, 0, -65529, 131072, 0, -65528, 131072, 0, -3, 131072, 0, -4, 131072, 0, -5, 131072, 0, -6, 131072, 0, -7, 131072, 0, -65537, 262144, 0, -65538, 262144, 0, -8, 131072, 0, -9, 131072, 0, -10, 131072, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=621324132]
+physics_material_override = SubResource("PhysicsMaterial_2q6dc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=184837124]
+position = Vector2(-1.5, -64)
+shape = SubResource("RectangleShape2D_2q6dc")
+script = ExtResource("2_w7c3h")
+
+[node name="Timer" type="Timer" parent="StaticBody2D" unique_id=172509638]
+wait_time = 4.0
+autostart = true
+
+[node name="WaitTimer" type="Timer" parent="StaticBody2D" unique_id=1246942516]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=665055344]
+
+[node name="PayPoint" type="CollisionShape2D" parent="Area2D" unique_id=1402004016]
+position = Vector2(-9, -64)
+shape = SubResource("RectangleShape2D_mx8sn")
+debug_color = Color(0.90588236, 0, 0.7490196, 1)
+script = ExtResource("3_w8frs")
+
+[connection signal="timeout" from="StaticBody2D/Timer" to="StaticBody2D/CollisionShape2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="StaticBody2D/WaitTimer" to="StaticBody2D/CollisionShape2D" method="_on_wait_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="Area2D/PayPoint" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D/PayPoint" method="_on_area_2d_body_entered"]

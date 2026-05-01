@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bj3lwo58u4dcj"]
+
+[ext_resource type="Script" uid="uid://lcieei1lcrsl" path="res://Bridge.cs" id="1_7ct4w"]
+[ext_resource type="PackedScene" uid="uid://iwlach6pq8nb" path="res://scenes/level.tscn" id="2_im2sa"]
+[ext_resource type="PackedScene" uid="uid://docuraow77d0v" path="res://scenes/npc.tscn" id="3_1q54l"]
+
+[node name="Bridge" type="Node2D" unique_id=608873318]
+script = ExtResource("1_7ct4w")
+
+[node name="Node2D" parent="." unique_id=1447284359 instance=ExtResource("2_im2sa")]
+layer_0/tile_data = PackedInt32Array(-65536, 131072, 0, -65535, 131072, 0, -65534, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, -65531, 131072, 0, -65530, 131072, 0, -65529, 131072, 0, -65528, 131072, 0, -3, 131072, 0, -4, 131072, 0, -5, 131072, 0, -6, 131072, 0, -7, 131072, 0, -65537, 262144, 0, -65538, 262144, 0, -8, 131072, 0, -9, 131072, 0, -10, 131072, 0, -65527, 131072, 0, -65526, 131072, 0, -65525, 131072, 0, -65524, 131072, 0, -65523, 131072, 0, -65522, 131072, 0, -65521, 131072, 0, -65520, 131072, 0, -65519, 131072, 0, -65518, 131072, 0, -65517, 131072, 0, -65516, 131072, 0, -65515, 131072, 0)
+
+[node name="NPC" parent="." unique_id=1300587486 instance=ExtResource("3_1q54l")]
+position = Vector2(50, -34)
+
+[node name="NPC2" parent="." unique_id=272655339 instance=ExtResource("3_1q54l")]
+position = Vector2(94, -34)
+
+[node name="NPC3" parent="." unique_id=2133817619 instance=ExtResource("3_1q54l")]
+position = Vector2(160, -32)
+
+[node name="NPC4" parent="." unique_id=1515056748 instance=ExtResource("3_1q54l")]
+position = Vector2(229, -33)
+
+[node name="NPC5" parent="." unique_id=1392220010 instance=ExtResource("3_1q54l")]
+position = Vector2(294, -34)
+
+[node name="NPC6" parent="." unique_id=2077024845 instance=ExtResource("3_1q54l")]
+position = Vector2(348, -35)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1042290246]
+position = Vector2(94, -34)
+zoom = Vector2(2, 2)
