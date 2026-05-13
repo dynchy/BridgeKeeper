@@ -13,8 +13,10 @@ texture = ExtResource("1_2q6dc")
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
 4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 3.4173145, 4.136751, 8, 8, 8, 8, -8, 8)
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, -0.71943474, 4.3166103, 8, 4.4964695, 8, 8, 8, 8, -8, 8)
+5:0/next_alternative_id = 2
 5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.057598, 8, 8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_w8frs"]
 physics_layer_0/collision_layer = 1
@@ -23,7 +25,7 @@ sources/0 = SubResource("TileSetAtlasSource_w7c3h")
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2q6dc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q6dc"]
-size = Vector2(13, 94)
+size = Vector2(8.5, 94)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mx8sn"]
 size = Vector2(20, 93)
@@ -38,7 +40,7 @@ layer_0/tile_data = PackedInt32Array(-65536, 131072, 0, -65535, 131072, 0, -6553
 physics_material_override = SubResource("PhysicsMaterial_2q6dc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=184837124]
-position = Vector2(-1.5, -64)
+position = Vector2(-9, -46)
 shape = SubResource("RectangleShape2D_2q6dc")
 script = ExtResource("2_w7c3h")
 
@@ -51,7 +53,7 @@ autostart = true
 [node name="Area2D" type="Area2D" parent="." unique_id=665055344]
 
 [node name="PayPoint" type="CollisionShape2D" parent="Area2D" unique_id=1402004016]
-position = Vector2(-9, -64)
+position = Vector2(36, -63)
 shape = SubResource("RectangleShape2D_mx8sn")
 debug_color = Color(0.90588236, 0, 0.7490196, 1)
 script = ExtResource("3_w8frs")

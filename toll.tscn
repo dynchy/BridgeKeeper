@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bn38n6ytckxbl"]
+
+[ext_resource type="Texture2D" uid="uid://by7crn4scw4rp" path="res://assets/troll toll.png" id="1_y2ru8"]
+
+[node name="Node2D" type="Sprite2D" unique_id=1411797870]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_y2ru8")

@@ -1,27 +1,65 @@
 [gd_scene format=3 uid="uid://b4ws61unjpodg"]
 
 [ext_resource type="Script" uid="uid://brai4nggf1qny" path="res://Npc.cs" id="1_abqhh"]
-[ext_resource type="Texture2D" uid="uid://dplcx77f0yx8t" path="res://assets/seye33.png" id="2_rv78h"]
+[ext_resource type="Texture2D" uid="uid://exvj6ix0lkk1" path="res://assets/guy1-Sheet.png" id="2_abqhh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abqhh"]
-size = Vector2(28.25, 17)
+size = Vector2(13, 15.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv78h"]
+atlas = ExtResource("2_abqhh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n8xq"]
+atlas = ExtResource("2_abqhh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wlns"]
+atlas = ExtResource("2_abqhh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tl2vt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv78h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n8xq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wlns")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="NPC" type="CharacterBody2D" unique_id=1300587486]
 z_index = 1
+up_direction = Vector2(0, 1)
+slide_on_ceiling = false
+floor_stop_on_slope = false
 floor_constant_speed = true
-safe_margin = 2.45
+floor_block_on_wall = false
+floor_max_angle = 1.5620697
+platform_floor_layers = 4294967041
+safe_margin = 2.0
 script = ExtResource("1_abqhh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1296873306]
 texture_filter = 1
-position = Vector2(5.125, 0)
+position = Vector2(-2.5, -0.75)
 shape = SubResource("RectangleShape2D_abqhh")
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1112697051]
-position = Vector2(-4.125, 1)
+[node name="Sprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=903727427]
+position = Vector2(2.5, 0.75)
 scale = Vector2(1, 1.09375)
-texture = ExtResource("2_rv78h")
+sprite_frames = SubResource("SpriteFrames_tl2vt")
+autoplay = "default"
+frame = 2
+frame_progress = 0.014045567
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1786309129]
-position = Vector2(-1, 1)
-target_position = Vector2(-30, 0)
+position = Vector2(-1, -1)
+target_position = Vector2(-14, 0)

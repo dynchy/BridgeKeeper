@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cj6dq5cb3xqob"]
+
+[ext_resource type="Script" uid="uid://cmxv44uo20war" path="res://SpawnPoint.cs" id="1_00gca"]
+[ext_resource type="PackedScene" uid="uid://b4ws61unjpodg" path="res://scenes/npc.tscn" id="2_og4he"]
+
+[node name="SpawnPoint" type="Node2D" unique_id=1360669436]
+script = ExtResource("1_00gca")
+Npc = ExtResource("2_og4he")
