@@ -25,7 +25,7 @@ public partial class Npc : CharacterBody2D
 		else
 		{
 			
-			Speed = -35.0f;
+			Speed = -70.0f;
 		}
 		//Velocity = new Vector2(Speed, Gravity);
 		velocity.X = Speed;

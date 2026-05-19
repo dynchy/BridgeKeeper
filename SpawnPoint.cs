@@ -3,8 +3,8 @@ using Godot;
 public partial class SpawnPoint : Node2D
 {
     [Export] public PackedScene Npc;       // assign your sprite scene in the Inspector
-    [Export] public float MinInterval = 3.0f;
-    [Export] public float MaxInterval = 7.0f;
+    [Export] public float MinInterval = 1.0f;
+    [Export] public float MaxInterval = 2.0f;
 
     private Timer _timer;
 
